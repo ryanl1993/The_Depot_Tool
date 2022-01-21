@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Raise a Support Ticket</title>
+
+    <!-- vendor css -->
+    <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Bracket CSS -->
+    <link rel="stylesheet" href="../css/bracket.css">
+  </head>
+
+  <body>
+
+    <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
+
+      <div class="login-wrapper wd-300 wd-xs-400 pd-25 pd-xs-40 bg-white rounded shadow-base">
+        <div class="signin-logo tx-center tx-28 tx-bold tx-inverse">The Depot Tool</div>
+        <div class="tx-center mg-b-40">Raise a Support Ticket</div>
+
+        <div class="form-group">
+          <div class="row mg-t-20">
+            <label class="col-sm-3 form-control-label">Ticket:</label>
+            <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+              <input type="number" class="form-control" placeholder="12345" readonly>
+            </div>
+          </div>
+
+          <div class="row mg-t-20">
+            <label class="col-sm-3 form-control-label">Name: <span class="tx-danger">*</span></label>
+            <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+              <input type="text" class="form-control" placeholder="Full Name">
+            </div>
+          </div>
+
+          <div class="row mg-t-20">
+            <label class="col-sm-3 form-control-label">Email: <span class="tx-danger">*</span></label>
+            <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+              <input type="email" class="form-control" placeholder="Email Address">
+            </div>
+          </div>
+
+          <div class="row mg-t-20">
+            <label class="col-sm-3 form-control-label">Number:<span class="tx-danger">*</span></label>
+            <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+              <input type="tel" class="form-control" placeholder="Telephone Number">
+            </div>
+          </div>
+
+          <div class="row mg-t-20">
+            <label class="col-sm-3 form-control-label">Issue:<span class="tx-danger">*</span></label>
+            <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+              <textarea rows="5" class="form-control" placeholder="Please State what the issue is"></textarea>
+            </div>
+          </div>
+
+        
+        </div><!-- form-group -->
+        <div class="form-group tx-12">Please ensure that you have given us enough information to be able to assist you.</div>
+        <button class="btn btn-info btn-block">Submit</button>
+        <div class="alert alert-success alert-dismissible" style="display:none">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          You have successfully submitted your ticket.
+        </div>
+        <div>
+          <a href="/app/index.html">Cancel</a>
+        </div>
+
+      </div><!-- login-wrapper -->
+    </div><!-- d-flex -->
+
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/popper.js/popper.js"></script>
+    <script src="../lib/bootstrap/bootstrap.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+    <script>
+      $(function(){
+        'use strict';
+
+        $('.select2').select2({
+          minimumResultsForSearch: Infinity
+        });
+
+      $(document).ready(function(){
+        $('button').click(function(){
+          $('.alert').show
+        })
+      })
+    });
+    </script>
+
+  </body>
+</html>
